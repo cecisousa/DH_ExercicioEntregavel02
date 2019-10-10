@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".views.LoginActivity">
+    tools:context=".views.PerfilActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtEmail"
+        android:id="@+id/txtNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -17,6 +17,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -41,62 +56,37 @@
             android:hint="Senha" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button1"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtRepetirSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSenha">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Repita a senha" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/colorAccent"
-        android:text="Login"
-        android:textColor="@color/colorWhite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSenha" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorGray"
-        android:focusable="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
-
-    <TextView
-        android:id="@+id/txtOu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OU"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:padding="10dp"
-        android:background="@color/colorWhite"
-        android:textColor="@color/colorGray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/colorGray"
-        android:text="Registrar"
+        android:text="Salvar perfil"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/txtRepetirSenha"
         app:layout_constraintVertical_bias="0.3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
