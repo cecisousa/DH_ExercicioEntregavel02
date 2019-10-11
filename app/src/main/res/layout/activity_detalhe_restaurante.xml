@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants">
 
     <ImageView
         android:id="@+id/imagemRestaurante"
@@ -18,14 +19,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tony" />
+        app:srcCompat="@drawable/tony"
+        android:contentDescription="@string/img_restaurante"/>
 
     <TextView
         android:id="@+id/nomeRestaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:text="Nome do restaurante"
+        android:text="@string/nome_restaurante"
         android:textColor="@color/colorWhite"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -41,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="Pratos principais"
+        android:text="@string/pratos_principais"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
